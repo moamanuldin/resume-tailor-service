@@ -118,7 +118,10 @@
         <h1>Submit Your Order</h1>
         <p class="subtitle">Please fill out the form below after payment. We'll deliver your tailored resume and cover letter within 2 hours.</p>
 
-        <form id="order-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" enctype="multipart/form-data">
+        <form id="order-form" action="https://formsubmit.co/mohmedaman27@gmail.com" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_subject" value="New Resume Tailor Order">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
             <div class="form-group">
                 <label for="name">Full Name *</label>
                 <input type="text" id="name" name="name" required>
@@ -145,11 +148,17 @@
         <div class="note">
             <p><strong>Important:</strong></p>
             <ul>
-                <li>Make sure you've completed payment before submitting this form.</li>
-                <li>We'll send the tailored resume and cover letter to the email you provide.</li>
+                <li><strong>Payment required before submission.</strong> Send $19 via:</li>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Bitcoin (BTC):</strong> <code style="background:#f0f0f0;padding:2px 5px;border-radius:3px;">17wRQxEHMt2SGbX6f8MhesM24nZoBif7yk</code></li>
+                    <li><strong>USDT (BSC):</strong> <code style="background:#f0f0f0;padding:2px 5px;border-radius:3px;">0x779a2ddf3fcdfe1549de63df449d911ced746d3e</code></li>
+                </ul>
+                <li>After payment, submit this form with your resume and job description.</li>
+                <li>We'll send the tailored resume and cover letter to the email you provide within 2 hours.</li>
                 <li>If you need express delivery (1 hour), please email us after submission.</li>
                 <li>Your data is confidential and will be deleted after delivery.</li>
             </ul>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">Include your email address in the payment memo so we can match your payment to your order.</p>
         </div>
     </div>
 
