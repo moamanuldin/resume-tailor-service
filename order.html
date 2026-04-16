@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Resume & Job Description</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a2980;
+            margin-bottom: 10px;
+            font-size: 2.8rem;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+        input:focus,
+        textarea:focus {
+            border-color: #1a2980;
+            outline: none;
+        }
+        textarea {
+            min-height: 200px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: linear-gradient(90deg, #1a2980, #26d0ce);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .note {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-size: 0.95rem;
+            color: #666;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #1a2980;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <h1>Submit Your Order</h1>
+        <p class="subtitle">Please fill out the form below after payment. We'll deliver your tailored resume and cover letter within 2 hours.</p>
+
+        <form id="order-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="resume">Upload Your Current Resume (PDF, DOCX, or TXT) *</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx,.txt" required>
+            </div>
+            <div class="form-group">
+                <label for="jd">Paste the Job Description *</label>
+                <textarea id="jd" name="job_description" placeholder="Copy and paste the full job description here..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="notes">Additional Notes (optional)</label>
+                <textarea id="notes" name="notes" placeholder="Any specific requirements, tone preferences, or things you'd like us to highlight?"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Order</button>
+        </form>
+
+        <div class="note">
+            <p><strong>Important:</strong></p>
+            <ul>
+                <li>Make sure you've completed payment before submitting this form.</li>
+                <li>We'll send the tailored resume and cover letter to the email you provide.</li>
+                <li>If you need express delivery (1 hour), please email us after submission.</li>
+                <li>Your data is confidential and will be deleted after delivery.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Simple form validation
+        const form = document.getElementById('order-form');
+        form.addEventListener('submit', function(e) {
+            const fileInput = document.getElementById('resume');
+            const file = fileInput.files[0];
+            if (file) {
+                const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'];
+                if (!validTypes.includes(file.type)) {
+                    e.preventDefault();
+                    alert('Please upload a valid file type (PDF, DOC, DOCX, or TXT).');
+                    return;
+                }
+                if (file.size > 10 * 1024 * 1024) { // 10 MB
+                    e.preventDefault();
+                    alert('File size too large. Please upload a file smaller than 10MB.');
+                    return;
+                }
+            }
+            // If using Formspree, let it handle submission
+        });
+    </script>
+</body>
+</html>
