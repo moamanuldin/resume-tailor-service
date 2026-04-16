@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Security Audit Order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0,0,0,0.6);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0,212,255,0.2);
+        }
+        h1 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+            font-size: 2.8rem;
+        }
+        .subtitle {
+            color: #aaa;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #ddd;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border 0.3s;
+            color: white;
+        }
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #00d4ff;
+            outline: none;
+        }
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255,65,108,0.6);
+        }
+        .note {
+            background: rgba(255,65,108,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-size: 0.95rem;
+            color: #ff9999;
+            border-left: 5px solid #ff416c;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .payment-info {
+            background: rgba(0,212,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #00d4ff;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="security.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Security Service</a>
+        <h1>Emergency Security Audit Order</h1>
+        <p class="subtitle">Complete this form after payment. We'll contact you within 2 hours.</p>
+
+        <div class="payment-info">
+            <h3><i class="fas fa-money-bill-wave"></i> Payment Instructions</h3>
+            <p><strong>Bitcoin:</strong> bc1qplaceholderaddress (Email after submission for exact address)</p>
+            <p><strong>Ethereum:</strong> 0xplaceholderaddress</p>
+            <p><strong>Upwork:</strong> Send invite to "SecurityAuditPro" with $500 milestone</p>
+            <p><em>After payment, fill out this form. Include transaction ID or Upwork job link.</em></p>
+        </div>
+
+        <form id="security-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
+            <div class="form-group">
+                <label for="name">Contact Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="target">Target System (URL, IP, app name) *</label>
+                <input type="text" id="target" name="target" placeholder="e.g., https://example.com, 192.168.1.1, MyiOSApp" required>
+            </div>
+            <div class="form-group">
+                <label for="type">System Type *</label>
+                <select id="type" name="type" required>
+                    <option value="">Select...</option>
+                    <option value="web">Web Application / Website</option>
+                    <option value="api">API / Backend Service</option>
+                    <option value="mobile">Mobile App (iOS/Android)</option>
+                    <option value="network">Network / Infrastructure</option>
+                    <option value="cloud">Cloud Environment (AWS/Azure/GCP)</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="concerns">Specific Concerns (optional)</label>
+                <textarea id="concerns" name="concerns" placeholder="Any known vulnerabilities, recent incidents, or areas of particular concern?"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="payment">Payment Method Used *</label>
+                <select id="payment" name="payment" required>
+                    <option value="">Select...</option>
+                    <option value="btc">Bitcoin</option>
+                    <option value="eth">Ethereum</option>
+                    <option value="upwork">Upwork Escrow</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="txid">Transaction ID / Job Link *</label>
+                <input type="text" id="txid" name="txid" placeholder="BTC TXID, ETH hash, or Upwork job URL" required>
+            </div>
+            <div class="form-group">
+                <label for="nda">NDA Required?</label>
+                <select id="nda" name="nda">
+                    <option value="no">No</option>
+                    <option value="yes">Yes, please send NDA template</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit Order</button>
+        </form>
+
+        <div class="note">
+            <p><strong>What happens next:</strong></p>
+            <ol>
+                <li>We verify payment (usually within 30 minutes).</li>
+                <li>We contact you via email to confirm scope and timeline.</li>
+                <li>We begin the security audit immediately.</li>
+                <li>You receive preliminary findings within 12 hours, full report + fixes within 24 hours.</li>
+                <li>7 days of follow‑up support included.</li>
+            </ol>
+            <p>All work is confidential. We delete all data after 30 days unless otherwise agreed.</p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('security-form');
+        form.addEventListener('submit', function(e) {
+            // Basic validation
+            const target = document.getElementById('target').value.trim();
+            if (!target) {
+                e.preventDefault();
+                alert('Please enter a target system.');
+                return;
+            }
+            // If using Formspree, let it handle submission
+        });
+    </script>
+</body>
+</html>
