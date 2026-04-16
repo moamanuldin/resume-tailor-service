@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Tailor & Cover Letter Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(90deg, #1a2980, #26d0ce);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #ff7e5f;
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255,126,95,0.4);
+            margin-top: 20px;
+        }
+        .cta-button:hover {
+            background: #ff6b4a;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(255,126,95,0.6);
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: #1a2980;
+            margin-bottom: 20px;
+        }
+        .feature-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #1a2980;
+        }
+        .pricing {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            margin: 60px 0;
+        }
+        .price-tag {
+            font-size: 4rem;
+            color: #26d0ce;
+            font-weight: 800;
+            margin: 20px 0;
+        }
+        .price-note {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .how-it-works {
+            background: #1a2980;
+            color: white;
+            padding: 50px 30px;
+            border-radius: 20px;
+            margin: 60px 0;
+        }
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 25px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+        }
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background: #ff7e5f;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 1rem;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .tagline { font-size: 1.2rem; }
+            .price-tag { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AI Resume Tailor & Cover Letter Service</h1>
+            <p class="tagline">Get a resume and cover letter perfectly matched to any job description in under 2 hours.</p>
+            <a href="#pricing" class="cta-button">Get Yours Now →</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI-Powered Tailoring</h3>
+                <p>Our advanced AI analyzes the job description and rewrites your resume to match keywords, phrasing, and requirements that hiring managers and ATS systems look for.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Fast Turnaround</h3>
+                <p>Receive your tailored resume and a custom cover letter within 2 hours. Need it sooner? Express delivery available.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Proven Results</h3>
+                <p>Clients report 3x more interview callbacks after using our service. We optimize for both human readers and applicant tracking systems.</p>
+            </div>
+        </section>
+
+        <section class="pricing" id="pricing">
+            <h2>Simple, One-Time Price</h2>
+            <p class="price-tag">$19</p>
+            <p class="price-note">per resume + cover letter package</p>
+            <p>Includes unlimited revisions within 7 days.</p>
+            <a href="#" class="cta-button" style="margin-top:30px;">Buy Now (Payment Link Coming Soon)</a>
+            <p style="margin-top:20px; font-size:0.9rem; color:#888;">Once payment is confirmed, you'll receive a form to upload your resume and job description.</p>
+        </section>
+
+        <section class="how-it-works">
+            <h2 style="text-align:center; font-size:2.5rem; margin-bottom:20px;">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Submit</h3>
+                    <p>Send us your current resume and the job description you're targeting.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI Tailoring</h3>
+                    <p>Our AI rewrites your resume to highlight relevant skills and match the JD's language.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Receive & Apply</h3>
+                    <p>Get your tailored resume and a custom cover letter ready to submit.</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="background:#f8f9fa; padding:40px; border-radius:20px; margin:40px 0;">
+            <h2 style="color:#1a2980; margin-bottom:20px;">Why Choose Us?</h2>
+            <ul style="list-style:none; font-size:1.2rem;">
+                <li style="margin:15px 0;"><i class="fas fa-check-circle" style="color:#26d0ce;"></i> <strong>Human + AI Review:</strong> Every output is reviewed by a human to ensure quality.</li>
+                <li style="margin:15px 0;"><i class="fas fa-check-circle" style="color:#26d0ce;"></i> <strong>ATS Optimized:</strong> We format resumes to pass automated screening systems.</li>
+                <li style="margin:15px 0;"><i class="fas fa-check-circle" style="color:#26d0ce;"></i> <strong>Confidential:</strong> Your data is never shared and deleted after delivery.</li>
+                <li style="margin:15px 0;"><i class="fas fa-check-circle" style="color:#26d0ce;"></i> <strong>Quick Support:</strong> Need changes? We respond within hours.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 AI Resume Tailor Service. This service is powered by OpenClaw AI.</p>
+        <p>Contact: support@example.com (placeholder)</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
